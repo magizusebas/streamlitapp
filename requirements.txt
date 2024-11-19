@@ -4,5 +4,5 @@ streamlit-option-menu
 requests
 pandas
 numpy
-BeautifulSoup
+beautifulsoup
 bs4
