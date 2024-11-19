@@ -24,7 +24,7 @@ css = f"""
 # Inject CSS into Streamlit app
 st.markdown(css, unsafe_allow_html=True)
 
-with open('/content/waves.css') as f:
+with open('waves.css') as f:
     css = f.read()
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
