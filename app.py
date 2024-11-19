@@ -78,11 +78,11 @@ st.markdown('<p class="dashboard_subtitle">Look at the pretty waves</p>', unsafe
 
 
 # Horizontal Menu
-menu_selected = option_menu(None, ["Home", "PLAYER", "AB", 'AVG'],
+menu_selected = option_menu(None, ["Home", "PLAYER", "AB",
     icons=['house', 'cloud-upload', "list-task", 'gear'],
     menu_icon="cast", default_index=0, orientation="horizontal",
         styles={
-        "container": {"background-color": "#B7A6F6"},
+        "container": {"background-color": "#D9BEF0"},
         "icon": {"color": "#802EF2", "font-size": "20px"},
         "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#88A3E2"},
         "nav-link-selected": {"background-color": "#7A577A"},
@@ -126,6 +126,3 @@ if menu_selected=="AB":
       st.plotly_chart(fig1,use_container_width=True)
 
     loadCategory(url)
-
-if menu_selected=="AVG":
-    st.write("The AVG page")
