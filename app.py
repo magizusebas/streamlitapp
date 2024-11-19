@@ -78,7 +78,7 @@ st.markdown('<p class="dashboard_subtitle">Look at the pretty waves</p>', unsafe
 
 
 # Horizontal Menu
-menu_selected = option_menu(None, ["Home", "PLAYER", "AB",
+menu_selected = option_menu(None, ["Home", "PLAYER", "AB")
     icons=['house', 'cloud-upload', "list-task", 'gear'],
     menu_icon="cast", default_index=0, orientation="horizontal",
         styles={
