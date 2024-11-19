@@ -34,15 +34,9 @@ st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 #IMPORT DATA SET
 
-url = "https://www.mlb.com/stats/"
-response = requests.get(url)
-soup = BeautifulSoup(response.content, 'lxml')
-
-# Find the specific table. Adjust the selector as needed based on table structure.
-table = soup.find("table")  # This finds the first table; you might need to specify further
 
 # Convert HTML table to a pandas DataFrame
-df = pd.read_html(str(table))[0] if table else pd.DataFrame()
+df = pd.read_csv("exit_velocity.csv")
 
 #CHANGE NAMES OF COLUMNS
 df = df.rename(columns={
