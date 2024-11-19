@@ -1,7 +1,7 @@
 streamlit
 requests
 pandas
-BeautifufSoup
+beautifulsoup
 plotly.graphs_objects
 seaborn
 matplotlib.pyplot
