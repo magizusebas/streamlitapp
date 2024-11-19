@@ -79,9 +79,9 @@ st.markdown('<p class="dashboard_subtitle">Look at the pretty waves</p>', unsafe
 
 # Horizontal Menu
 menu_selected = option_menu(None, ["Home", "PLAYER", "AB"])
-    icons=['house', 'cloud-upload', "list-task", 'gear'],
-    menu_icon="cast", default_index=0, orientation="horizontal",
-        styles={
+icons=['house', 'cloud-upload', "list-task", 'gear'],
+menu_icon="cast", default_index=0, orientation="horizontal",
+styles={
         "container": {"background-color": "#D9BEF0"},
         "icon": {"color": "#802EF2", "font-size": "20px"},
         "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#88A3E2"},
