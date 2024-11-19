@@ -93,13 +93,12 @@ if menu_selected=="PLAYER":
 
 if menu_selected=="AB":
     st.write("The AB page")
-    def loadCategory(url):
-      df=pd.read_csv(url)
+    def loadCategory(df):
       dfCategories = df.groupby('PLAYER')['AB'].sum().reset_index()
       fig1 = px.bar(dfCategories, x='PLAYER', y='AB', color="PLAYER", title="AB by Player")
       st.plotly_chart(fig1,use_container_width=True)
 
-    loadCategory(url)
+    loadCategory(df)
 
 if menu_selected=="AVG":
     st.write("The AVG page")
