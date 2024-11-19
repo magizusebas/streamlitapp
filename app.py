@@ -36,7 +36,15 @@ st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 
 # Convert HTML table to a pandas DataFrame
-df = pd.read_csv("exit_velocity.csv")
+url = "https://www.mlb.com/stats/"
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'lxml')
+
+# Find the specific table. Adjust the selector as needed based on table structure.
+table = soup.find("table")  # This finds the first table; you might need to specify further
+
+# Convert HTML table to a pandas DataFrame
+df = pd.read_html(str(table))[0] if table else pd.DataFrame()
 
 #CHANGE NAMES OF COLUMNS
 df = df.rename(columns={
@@ -93,12 +101,12 @@ if menu_selected=="PLAYER":
 
 if menu_selected=="AB":
     st.write("The AB page")
-    def loadCategory(df):
+    def loadCategory(url):
       dfCategories = df.groupby('PLAYER')['AB'].sum().reset_index()
       fig1 = px.bar(dfCategories, x='PLAYER', y='AB', color="PLAYER", title="AB by Player")
       st.plotly_chart(fig1,use_container_width=True)
 
-    loadCategory(df)
+    loadCategory(url)
 
 if menu_selected=="AVG":
     st.write("The AVG page")
