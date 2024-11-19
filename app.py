@@ -89,41 +89,22 @@ menu_selected = option_menu(None, ["Home", "PLAYER", "AB", 'AVG'],
     }
 )
 
-st.subheader("Distribution of Hits")
-
-num_bins = 10
-
-fig_1 = px.histogram(df, x='H', title='Distribution of Hits', nbins=num_bins)
-
-# Display the plot
-st.plotly_chart(fig_1)
-
-#SEABORN SCATTERPLOT
-
-fig_scatter, ax = plt.subplots(figsize=(8, 6))
-
-# Generate the scatter plot and assign it to the `ax` object
-sns.scatterplot(data=df, x='AB', y='H', ax=ax)
-
-# Set the title and labels
-ax.set_title('Scatter Plot between Column1 and Column2')
-ax.set_xlabel('Column1')
-ax.set_ylabel('Column2')
-
-# Display the plot
-st.pyplot(fig_scatter)
-
-if menu_selected=="PLAYER":
-    st.write("The PLAYER page")
-    # Create a selectbox for filtering
-    selected_name = st.selectbox("Select a Team to view details:", df['TEAM'])
-
-    # Filter the DataFrame based on the selected name
-    filtered_df = df[df['TEAM'] == selected_name]
-
-    # Display the filtered DataFrame
-    st.write("Filtered DataFrame:")
-    st.write(filtered_df)
+if menu_selected =="Home":
+    st.subheader("Distribution of Hits")
+    num_bins = 10
+    fig_1 = px.histogram(df, x='H', title='Distribution of Hits', nbins=num_bins)
+    # Display the plot
+    st.plotly_chart(fig_1)
+    #SEABORN SCATTERPLOT
+    fig_scatter, ax = plt.subplots(figsize=(8, 6))
+    # Generate the scatter plot and assign it to the `ax` object
+    sns.scatterplot(data=df, x='AB', y='H', ax=ax)
+    # Set the title and labels
+    ax.set_title('Scatter Plot between Column1 and Column2')
+    ax.set_xlabel('Column1')
+    ax.set_ylabel('Column2')
+    # Display the plot
+    st.pyplot(fig_scatter)
 
 if menu_selected=="AB":
     st.write("The AB page")
