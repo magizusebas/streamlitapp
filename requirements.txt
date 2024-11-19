@@ -1,8 +1,0 @@
-streamlit
-requests
-pandas
-beautifulsoup
-plotly.graphs_objects
-seaborn
-matplotlib.pyplot
-numpy
