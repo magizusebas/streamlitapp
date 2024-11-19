@@ -1,11 +1,11 @@
 
 import streamlit as st
-import streamlit as st
 from streamlit_option_menu import option_menu
 import requests
 import pandas as pd
 import numpy as np
 from bs4 import BeautifulSoup
+import plotly.express as px
 
 
 # Define background color CSS
