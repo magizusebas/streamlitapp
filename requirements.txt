@@ -1,0 +1,7 @@
+
+streamlit==1.26.0
+streamlit-option-menu==0.3.2
+requests==2.31.0
+pandas==2.1.1
+numpy==1.26.0
+beautifulsoup4==4.13.0
