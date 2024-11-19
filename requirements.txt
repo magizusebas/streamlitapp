@@ -1,0 +1,8 @@
+streamlit
+requests
+pandas
+BeautifufSoup
+plotly.graphs_objects
+seaborn
+matplotlib.pyplot
+numpy
